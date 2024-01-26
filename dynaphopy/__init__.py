@@ -1339,11 +1339,11 @@ class Quasiparticle:
             print('\nThermal properties per unit cell ({0:.2f} K) [From DoS]\n'
                   '----------------------------------------------'.format(temperature))
             print('                             Harmonic   Quasiparticle   Power spectrum\n')
-            print('Free energy   (KJ/mol): {0:12.4f}  {5:12.4f}  {10:12.4f}\n'
-                  'Entropy      (J/K/mol): {1:12.4f}  {6:12.4f}  {11:12.4f}\n'
-                  'Cv           (J/K/mol): {2:12.4f}  {7:12.4f}  {12:12.4f}\n'
-                  'Total energy  (KJ/mol): {3:12.4f}  {8:12.4f}  {13:12.4f}\n'
-                  'Integration:            {4:12.4f}  {9:12.4f}  {14:12.4f}\n'.format(*(harmonic_properties +
+            print('Free energy   (KJ/mol): {0:16.8f}  {5:16.8f}  {10:16.8f}\n'
+                  'Entropy      (J/K/mol): {1:16.8f}  {6:16.8f}  {11:16.8f}\n'
+                  'Cv           (J/K/mol): {2:16.8f}  {7:16.8f}  {12:16.8f}\n'
+                  'Total energy  (KJ/mol): {3:16.8f}  {8:16.8f}  {13:16.8f}\n'
+                  'Integration:            {4:16.8f}  {9:16.8f}  {14:16.8f}\n'.format(*(harmonic_properties +
                                                                                         renormalized_properties +
                                                                                         power_spectrum_properties)))
             if not self.parameters.silent:
@@ -1354,11 +1354,11 @@ class Quasiparticle:
             print('\nThermal properties per unit cell ({0:.2f} K) [From DoS]\n'
                   '----------------------------------------------'.format(temperature))
             print('                            Harmonic    Quasiparticle\n')
-            print('Free energy   (KJ/mol): {0:12.4f}  {5:12.4f}\n'
-                  'Entropy      (J/K/mol): {1:12.4f}  {6:12.4f}\n'
-                  'Cv           (J/K/mol): {2:12.4f}  {7:12.4f}\n'
-                  'Total energy  (KJ/mol): {3:12.4f}  {8:12.4f}\n'
-                  'Integration:            {4:12.4f}  {9:12.4f}\n'.format(
+            print('Free energy   (KJ/mol): {0:16.8f}  {5:16.8f}\n'
+                  'Entropy      (J/K/mol): {1:16.8f}  {6:16.8f}\n'
+                  'Cv           (J/K/mol): {2:16.8f}  {7:16.8f}\n'
+                  'Total energy  (KJ/mol): {3:16.8f}  {8:16.8f}\n'
+                  'Integration:            {4:16.8f}  {9:16.8f}\n'.format(
                 *(harmonic_properties + renormalized_properties)))
 
         if not self.parameters.silent:
