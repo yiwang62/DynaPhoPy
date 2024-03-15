@@ -55,7 +55,16 @@ def read_vasp_trajectory(file_name, structure=None, time_step=None,
         file_map.readline()
         super_cell = []
         for i in range (number_of_dimensions):
-            super_cell.append(file_map.readline().split()[0:number_of_dimensions])
+            #super_cell.append(file_map.readline().split()[0:number_of_dimensions])
+            # Extract substrings of fixed width
+            tmpline = file_map.readline().decode('utf-8')
+            field_widths = [16, 13, 13]  # Example field widths for each field
+            fields = []
+            start = 0
+            for width in field_widths:
+                fields.append(tmpline[start:start+width].strip())
+                start += width
+            super_cell.append(fields[0:number_of_dimensions])
         super_cell = np.array(super_cell, dtype='double')
 
         file_map.seek(position_number)
